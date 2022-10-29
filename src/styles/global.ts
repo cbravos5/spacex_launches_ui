@@ -5,6 +5,15 @@ export const globalStyles = globalCss({
     m: 0,
     padding: 0,
     boxSizing: 'border-box',
+    fontFamily: '$Raleway',
+
+    '&::-webkit-scrollbar': {
+      display:' none'
+    },
+
+    '-ms-overflow-style': 'none',  
+    scrollbarWidth: 'none',  
+    
   },
   'html, body, #__next': {
     minHeight: '100%',
@@ -12,7 +21,6 @@ export const globalStyles = globalCss({
   },
   body: {
     background: '$light',
-    fontFamily: '$Raleway',
     overflowX: 'hidden',
   },
   a: {
