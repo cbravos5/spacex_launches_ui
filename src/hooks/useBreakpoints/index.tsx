@@ -1,5 +1,5 @@
-import useWindowSize from 'hooks/useWindowSize';
-import { screenBreakpoints } from 'utils/screenBreakpoints';
+import { screenBreakpoints } from '../../utils/screenBreakpoints';
+import useWindowSize from '../useWindowSize';
 
 // Hook
 export default function useHideElement() {
