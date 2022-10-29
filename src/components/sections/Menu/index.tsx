@@ -15,22 +15,24 @@ const MenuBox = styled('section', {
 
   display: 'flex',
   justifyContent: 'space-around',
-  alignItems: 'center'
+  alignItems: 'center',
+
+  zIndex: 3,
 })
 
 const Menu = () => {
   return <MenuBox>
     <Box css={{ display: 'flex', justifyContent: 'space-around', width: '40%'}}>
-      <Nav to="">Upcoming</Nav>
-      <Nav to="">Next</Nav>
+      <Nav to="" delay={0}>Upcoming</Nav>
+      <Nav to="next" delay={1}>Next</Nav>
     </Box>
 
     <RoundedContainer />
     <FlyingRocket animate />
 
     <Box css={{ display: 'flex', justifyContent: 'space-around', width: '40%'}}>
-      <Nav to="">Latest</Nav>
-      <Nav to="">Previous</Nav>
+      <Nav to="" delay={2}>Latest</Nav>
+      <Nav to="" delay={3}>Previous</Nav>
     </Box>
   </MenuBox>
 }

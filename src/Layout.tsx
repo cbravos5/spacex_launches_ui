@@ -4,7 +4,7 @@ import Menu from "./components/sections/Menu";
 
 function Layout() {
   return <div>
-    <DecoyBackground animate={false}/>
+    <DecoyBackground animate/>
     <Menu />
     <Outlet />
   </div>

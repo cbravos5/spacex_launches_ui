@@ -13,6 +13,10 @@ const DecoyBackground = styled('div', {
   variants: {
     animate: {
       true: {
+        position: 'absolute',
+
+        zIndex: 2,
+
         height: '100vh',
 
         pointerEvents: 'none',

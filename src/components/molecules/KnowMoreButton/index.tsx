@@ -11,6 +11,8 @@ const Button = styled('button', {
   color: '$light',
   textAlign: 'center',
 
+  cursor: 'pointer',
+
   position: 'relative',
 
   borderRadius: '50px',

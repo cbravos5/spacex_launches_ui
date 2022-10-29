@@ -1,10 +1,14 @@
 import { styled } from "../../../stitches/stitches.config";
 import ArrowRight from "../../atoms/ArrowRight";
+import { Box } from "../../atoms/Box";
+import UnderlinedTitle from "../../atoms/UnderlinedTitle";
 import KnowMoreButton from "../../molecules/KnowMoreButton";
+import LaunchCountdown from "../../organisms/LaunchCountdown";
 
 const Container = styled('div',{
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
+  alignItems: 'center',
 
   height: 'calc(100% - 137px)',
   padding: '5vw 10vw',
@@ -15,27 +19,8 @@ const RightSide = styled('div',{
   flexDirection: 'column',
   justifyContent: 'space-between',
 
-  height: '100%'
+  gap: 140
 });
-
-const UnderlinedTitle = styled('h1', {
-  width: 'fit-content',
-  position: 'relative',
-
-  fontSize: '55px',
-  color: '$darkBlue',
-  fontWeight: '$medium',
-
-  '&::after': {
-    content: '',
-    position: 'absolute',
-    width: '50%',
-    height: 13,
-    background: '$darkBlue',
-    bottom: -10,
-    left: 0
-  }
-})
 
 const MissionName = styled('p', {
   fontSize: '36px',
@@ -53,12 +38,9 @@ const MainNextLaunch = () => {
         <MissionName>Nusantara Satu (PSN-6) / GTO-1 / Beresheet</MissionName>
         <KnowMoreButton />
       </RightSide>
-      {/* <LeftSide>
-        <TimeCard>32 days</TimeCard>
-        <TimeCard>5 hours</TimeCard>
-        <TimeCard>10 minutes</TimeCard>
-        <TimeCard>45 seconds</TimeCard>
-      </LeftSide> */}
+      <Box>
+        <LaunchCountdown />
+      </Box>
   </Container>
 };
 
