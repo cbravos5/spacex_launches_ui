@@ -15,7 +15,7 @@ export const globalStyles = globalCss({
     scrollbarWidth: 'none',  
     
   },
-  'html, body, #__next': {
+  'html, body': {
     minHeight: '100%',
     scrollBehavior: 'smooth',
   },

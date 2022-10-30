@@ -1,3 +1,5 @@
+import useBreakpoints from "../../../hooks/useBreakpoints";
+
 import { styled } from "../../../stitches/stitches.config";
 import ArrowRight from "../../atoms/ArrowRight";
 import { Box } from "../../atoms/Box";
@@ -7,40 +9,63 @@ import LaunchCountdown from "../../organisms/LaunchCountdown";
 
 const Container = styled('div',{
   display: 'flex',
-  justifyContent: 'space-around',
+  justifyContent: 'center',
+  flexDirection: 'column',
   alignItems: 'center',
 
-  height: 'calc(100% - 137px)',
-  padding: '5vw 10vw',
+  gap: '8vw',
+
+  height: 'calc(100% - 5vw)',
+  p: '10vw 5vw 5vw',
+
+  '@md': {
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+  }
 });
 
-const RightSide = styled('div',{
+const Group = styled('div',{
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between',
+  alignItems: 'center',
 
-  gap: 140
+  gap: '10vw',
+
+  '@md': {
+    gap: '7vw',
+    alignItems: 'flex-start',
+  },
+
+  '@lg2': {
+    gap: '5vw',
+  }
 });
 
 const MissionName = styled('p', {
-  fontSize: '36px',
+  fontSize: 'clamp($textMobile, 2vw, $textDesktop)',
   color: '$darkBlue',
+  textAlign: 'center',
 
-  width: '60%'
+  '@md': {
+    width: '60%',
+    textAlign: 'left',
+  }
+
 })
 
 const MainNextLaunch = () => {
-
+  const { isMdScreen } = useBreakpoints();
 
   return <Container>
-      <RightSide>
+      <Group>
         <UnderlinedTitle>Next Launch</UnderlinedTitle>
         <MissionName>Nusantara Satu (PSN-6) / GTO-1 / Beresheet</MissionName>
-        <KnowMoreButton />
-      </RightSide>
+        { !isMdScreen && <KnowMoreButton /> }
+      </Group>
       <Box>
         <LaunchCountdown />
       </Box>
+      { isMdScreen && <KnowMoreButton /> }
   </Container>
 };
 

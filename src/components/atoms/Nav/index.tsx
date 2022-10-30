@@ -6,7 +6,7 @@ const fadeIn = keyframes({
 });
 
 const StyledNavLink = styled(NavLink, {
-  fontSize: '32px',
+  fontSize: 'clamp(14px, 1.5vw, 32px)',
   color: '$light',
 
   cursor: 'pointer',

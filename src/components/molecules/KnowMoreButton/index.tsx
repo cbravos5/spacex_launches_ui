@@ -2,12 +2,12 @@ import { styled } from '../../../stitches/stitches.config';
 import ArrowRight from '../../atoms/ArrowRight';
 
 const Button = styled('button', {
-  width: '100%',
-  py: '24px',
+  width: '60%',
+  py: 10,
 
   background: '$blueSecondary',
 
-  fontSize: '42px',
+  fontSize: 'clamp($textMobile, 2.5vw, 42px)',
   color: '$light',
   textAlign: 'center',
 
@@ -29,19 +29,24 @@ const Button = styled('button', {
 
   '&:active': {
     transform: 'scale(0.98)'
-  }
+  },
+
+  '@md': {  
+    width: '80%',
+    py: 15
+  },
 });
 
 const StyledArrowRight = styled(ArrowRight, {
   position: 'absolute',
 
   aspectRatio: 1,
-  height: 'calc(100% + 2px)',
+  height: 'calc(100% + 1px)',
 
   right: 0,
 
   top: '-50%',
-  transform: 'translate(2px, calc(50% - 2px))',
+  transform: 'translate(2px, calc(50% - 1px))',
 
   fill: '$light'
 });

@@ -2,6 +2,7 @@ import { createStitches } from '@stitches/react';
 import { colors } from './theme/colors';
 import { fontWeights } from './theme/fontWeights';
 import { lineHeights } from './theme/lineHeights';
+import { fontSizes } from './theme/fontSizes';
 import type * as Stitches from '@stitches/react';
 import { margin } from './utils/margin';
 import { padding } from './utils/padding';
@@ -18,6 +19,7 @@ export const { css, styled, globalCss, keyframes, config } = createStitches({
     },
     fontWeights,
     lineHeights,
+    fontSizes,
     radii: {
       burguer: '11px',
       button: '14px',

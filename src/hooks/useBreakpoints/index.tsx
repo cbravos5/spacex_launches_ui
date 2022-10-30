@@ -2,12 +2,12 @@ import { screenBreakpoints } from '../../utils/screenBreakpoints';
 import useWindowSize from '../useWindowSize';
 
 // Hook
-export default function useHideElement() {
+export default function useBreakpoints() {
   const { width } = useWindowSize();
 
-  const isSmScreen = !!width && width > screenBreakpoints.sm;
-  const isMdScreen = !!width && width > screenBreakpoints.md;
-  const isLgScreen = !!width && width > screenBreakpoints.lg;
+  const isSmScreen = !!width && width <= screenBreakpoints.sm;
+  const isMdScreen = !!width && width <= screenBreakpoints.md;
+  const isLgScreen = !!width && width <= screenBreakpoints.lg;
 
   return {
     isSmScreen,

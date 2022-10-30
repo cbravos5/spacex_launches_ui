@@ -2,11 +2,16 @@ import { styled } from "../../../stitches/stitches.config";
 import TimeCard from "../../atoms/TimeCard";
 
 const Container = styled('div', {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
 
-  gap: 25
+  gap: 25,
+
+  '@md': {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  }
 })
 
 type TimedCardGroupProps = {
