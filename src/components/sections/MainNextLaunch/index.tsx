@@ -54,7 +54,7 @@ const MissionName = styled('p', {
 })
 
 const MainNextLaunch = () => {
-  const { isMdScreen } = useBreakpoints();
+  const { isMdScreen } = useBreakpoints()
 
   return <Container>
       <Group>

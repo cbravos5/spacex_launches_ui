@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './pages/Home';
+import Latest from './pages/Latest';
 import Next from './pages/Next';
 import { globalStyles } from './styles/global';
 
@@ -17,6 +18,7 @@ const PageRouter = () => {
     <Route element={<Layout />}>
       <Route path="/" element={<Home/>} />
       <Route path="/next" element={<Next />} />
+      <Route path="/latest" element={<Latest />} />
     </Route>
     )
   );

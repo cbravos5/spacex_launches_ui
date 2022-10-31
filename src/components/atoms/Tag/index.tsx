@@ -16,7 +16,13 @@ const Tag = styled('p', {
     type: {
       info: {
         background: "#007da760"
-      }
+      },
+      success: {
+        background: "#00a71160"
+      },
+      fail: {
+        background: "#ff000060"
+      },
     }
   }
 })

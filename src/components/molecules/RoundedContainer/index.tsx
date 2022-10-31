@@ -7,7 +7,7 @@ const RoundedContainer = () => (
     css={{
       minWidth: 72,
       minHeight: 72,
-      size: '10vw',
+      size: '8vw',
       background: '$blueMain',
       zIndex: 2,
       borderRadius: '100%',

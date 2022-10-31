@@ -3,7 +3,7 @@ import Rocket from "../../atoms/Rocket";
 
 const commonAnimation = {
   minWidth: 28,
-  width: '4vw',
+  width: '3vw',
 
   transform: 'translateX(-50%) translateY(0)',
 }
@@ -11,7 +11,7 @@ const commonAnimation = {
 const skyRiseMobile = keyframes({
   to: {
     ...commonAnimation,
-    top: '3vw'
+    top: '2.5vw'
   },
 });
 

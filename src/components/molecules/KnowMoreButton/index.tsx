@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { styled } from '../../../stitches/stitches.config';
 import ArrowRight from '../../atoms/ArrowRight';
 
@@ -51,10 +52,14 @@ const StyledArrowRight = styled(ArrowRight, {
   fill: '$light'
 });
 
-const KnowMoreButton = () => (
-  <Button>
+const KnowMoreButton = () => {
+  const navigate = useNavigate();
+
+
+  return (
+  <Button onClick={() => navigate("next")}>
     Know more <StyledArrowRight />{' '}
   </Button>
-);
+);}
 
 export default KnowMoreButton;
