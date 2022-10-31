@@ -1,12 +1,15 @@
-import Rocket from '../../components/atoms/Rocket';
 import GradientBackground from '../../components/molecules/GradientBackground';
 import MainNextLaunch from '../../components/sections/MainNextLaunch';
-import { keyframes, styled } from '../../stitches/stitches.config';
+import { urls } from '../../configs/apiRoutes';
+import useFetch from '../../hooks/useFetch';
+import { ILaunch } from '../../interfaces/ILaunch';
 
 const Home = () => {
+  const { data, error } = useFetch<ILaunch>(urls.nextLaunch);
+
   return (
     <GradientBackground>
-      <MainNextLaunch />
+      { data && <MainNextLaunch launch={data}/> }
     </GradientBackground>
   );
 };

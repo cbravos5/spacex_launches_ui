@@ -3,7 +3,8 @@ import { styled } from '../../../stitches/stitches.config';
 import ArrowRight from '../../atoms/ArrowRight';
 
 const Button = styled('button', {
-  width: '60%',
+  width: '40vw',
+  minWidth: 264,
   py: 10,
 
   background: '$blueSecondary',
@@ -33,9 +34,13 @@ const Button = styled('button', {
   },
 
   '@md': {  
-    width: '80%',
+    width: '35vw',
     py: 15
   },
+
+  '@lg': {
+    width: '25vw',
+  }
 });
 
 const StyledArrowRight = styled(ArrowRight, {

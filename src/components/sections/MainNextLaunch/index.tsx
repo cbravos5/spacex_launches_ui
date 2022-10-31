@@ -1,7 +1,7 @@
 import useBreakpoints from "../../../hooks/useBreakpoints";
+import { ILaunch } from "../../../interfaces/ILaunch";
 
 import { styled } from "../../../stitches/stitches.config";
-import ArrowRight from "../../atoms/ArrowRight";
 import { Box } from "../../atoms/Box";
 import UnderlinedTitle from "../../atoms/UnderlinedTitle";
 import KnowMoreButton from "../../molecules/KnowMoreButton";
@@ -53,17 +53,17 @@ const MissionName = styled('p', {
 
 })
 
-const MainNextLaunch = () => {
+const MainNextLaunch = ({ launch }: { launch: ILaunch }) => {
   const { isMdScreen } = useBreakpoints()
 
   return <Container>
       <Group>
         <UnderlinedTitle>Next Launch</UnderlinedTitle>
-        <MissionName>Nusantara Satu (PSN-6) / GTO-1 / Beresheet</MissionName>
+        <MissionName>{launch.name}</MissionName>
         { !isMdScreen && <KnowMoreButton /> }
       </Group>
       <Box>
-        <LaunchCountdown />
+        <LaunchCountdown launchDate={launch.dateUtc}/>
       </Box>
       { isMdScreen && <KnowMoreButton /> }
   </Container>
