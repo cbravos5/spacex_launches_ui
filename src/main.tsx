@@ -4,7 +4,5 @@ import App from './Layout'
 import PageRouter from './PageRouter'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <PageRouter />
-  </React.StrictMode>
+ <PageRouter />
 )

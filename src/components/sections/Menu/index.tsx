@@ -39,7 +39,7 @@ const Menu = () => {
         css={{ display: 'flex', justifyContent: 'space-around', width: '40%' }}
       >
         <Nav to='latest' delay={2}>Latest</Nav>
-        <Nav to='' delay={3}>Previous</Nav>
+        <Nav to='previous' delay={3}>Previous</Nav>
       </Box>
     </MenuBox>
   );

@@ -23,6 +23,11 @@ const Tag = styled('p', {
       fail: {
         background: "#ff000060"
       },
+    },
+    small: {
+      true: {
+        fontSize: 'clamp($textMobile, 2vw, 25px)',
+      }
     }
   }
 })

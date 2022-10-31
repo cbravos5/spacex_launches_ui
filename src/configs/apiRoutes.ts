@@ -4,5 +4,5 @@ export const urls = {
   nextLaunch: baseUrl + '/next',
   latestLaunch: baseUrl + '/latest',
   upcomingLaunches: baseUrl + '/upcoming',
-  previousLaunches: baseUrl + '/previous',
+  previousLaunches: baseUrl + '/past',
 }

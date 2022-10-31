@@ -23,10 +23,11 @@ const MissionName = styled('p', {
 type Props = {
   children?: React.ReactNode;
   name: string;
+  isSmall?: boolean;
 }
 
-const NamedBox = ({ children, name }: Props) => 
-<LaunchInfoContainer>
+const NamedBox = ({ children, name, isSmall }: Props) => 
+<LaunchInfoContainer small={isSmall}>
   <MissionName>{name}</MissionName>
   {children}
 </LaunchInfoContainer>

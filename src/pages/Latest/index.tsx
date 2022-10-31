@@ -8,7 +8,7 @@ const Latest = () => {
   const { data, error } = useFetch<ILaunch>(urls.latestLaunch);
   
   return (
-  <GradientBackground css={{ display: 'grid', placeItems: 'center' }}>
+  <GradientBackground css={{ display: 'grid', placeItems: 'center', p: '5vw' }}>
     { data && <LatestLaunchInfo launch={data} />}
   </GradientBackground>
 );}

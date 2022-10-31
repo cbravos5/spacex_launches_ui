@@ -8,7 +8,7 @@ const Next = () => {
   const { data, error } = useFetch<ILaunch>(urls.nextLaunch);
 
   return (
-    <GradientBackground css={{ display: 'grid', placeItems: 'center' }}>
+    <GradientBackground css={{ display: 'grid', placeItems: 'center', p: '5vw' }}>
       {data && <NextLaunchInfo launch={data} />}
     </GradientBackground>
   );
