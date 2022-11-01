@@ -10,14 +10,14 @@ import { ILaunch } from "../../interfaces/ILaunch";
 import { IPagedLaunches } from "../../interfaces/IPagedLaunches";
 import LoadMore from "../../components/atoms/LoadMore";
 
-const Previous = () => {
-  const { get, response, loading } = useFetch<IPagedLaunches>({ data: [] })
+const Upcoming = () => {
+  const { get, response, loading } = useFetch<IPagedLaunches>({ data: [] });
   const [launches, setLaunches] = useState<ILaunch[]>([]);
   const [hasNextPage, setHasNextPage] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   
   const loadLaunches = useCallback(async () => {
-    const data = await get(`${urls.previousLaunches}/${currentPage}`)
+    const data = await get(`${urls.upcomingLaunches}/${currentPage}`);
     if (response.ok) {
       setLaunches((state) => ([ ...state, ...data.launches ]));
       setHasNextPage(data.hasNextPage);
@@ -47,4 +47,4 @@ const Previous = () => {
   );
 }
 
-export default Previous;
+export default Upcoming;

@@ -6,6 +6,8 @@ const commonAnimation = {
   width: '3vw',
 
   transform: 'translateX(-50%) translateY(0)',
+
+  cursor: 'pointer',
 }
 
 const skyRiseMobile = keyframes({
@@ -34,6 +36,10 @@ const FlyingRocket = styled(Rocket, {
   left: '50%',
 
   zIndex: 3,
+
+  '&:hover': {
+    filter: 'brightness(90%)'
+  },
 
   variants: {
     animate: {

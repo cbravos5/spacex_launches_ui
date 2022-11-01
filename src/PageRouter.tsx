@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Latest from './pages/Latest';
 import Next from './pages/Next';
 import Previous from './pages/Previous';
+import Upcoming from './pages/Upcoming';
 import { globalStyles } from './styles/global';
 
 const PageRouter = () => {
@@ -21,7 +22,7 @@ const PageRouter = () => {
       <Route path="/next" element={<Next />} />
       <Route path="/latest" element={<Latest />} />
       <Route path="/previous" element={<Previous />} />
-      {/* <Route path="/upcoming" element={<Upcoming />} /> */}
+      <Route path="/upcoming" element={<Upcoming />} />
     </Route>
     )
   );

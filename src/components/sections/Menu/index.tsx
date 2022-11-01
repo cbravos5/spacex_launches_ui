@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import useBreakpoints from '../../../hooks/useBreakpoints';
 import { styled } from '../../../stitches/stitches.config';
 import { Box } from '../../atoms/Box';
@@ -23,17 +24,19 @@ const MenuBox = styled('section', {
 });
 
 const Menu = () => {
+  const navigate = useNavigate();
+
   return (
     <MenuBox>
       <Box
         css={{ display: 'flex', justifyContent: 'space-around', width: '40%' }}
       >
-        <Nav to='' delay={0}>Upcoming</Nav>
+        <Nav to='upcoming' delay={0}>Upcoming</Nav>
         <Nav to='next' delay={1}>Next</Nav>
       </Box>
 
       <RoundedContainer />
-      <FlyingRocket animate />
+      <FlyingRocket animate onClick={() => navigate("/")} />
 
       <Box
         css={{ display: 'flex', justifyContent: 'space-around', width: '40%' }}
