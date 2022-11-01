@@ -29,8 +29,8 @@ type LaunchesGridProps = {
 
 const LaunchesGrid = ({ launches }: LaunchesGridProps) => (
   <Grid>
-    {launches.map((launch) => (
-      <LaunchInfoCard launch={launch} isSmall isUpcoming={launch.upcoming} />
+    {launches.map((launch, i) => (
+      <LaunchInfoCard key={i} launch={launch} isSmall isUpcoming={launch.upcoming} />
     ))}
   </Grid>
 );
